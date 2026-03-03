@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Ram Studio | Premium Wedding & Portrait Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGold: '#cca352',
+                        brandDark: '#0a0a0a',
+                        brandGray: '#1a1a1a',
+                        whatsappGreen: '#25D366'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cca352; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        img.placeholder-img {
+            background-color: #1a1a1a;
+            position: relative;
+        }
+        img.placeholder-img::after {
+            content: "Yahan " attr(src) " upload karein";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #1a1a1a;
+            color: #cca352;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brandGold selection:text-black">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-20 md:h-24">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 md:w-14 md:h-14 relative overflow-hidden rounded-full border border-white/10 group-hover:border-brandGold/50 transition-colors duration-500 bg-black flex items-center justify-center">
+                         <img src="logo.jpg" alt="Shri Ram Studio Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl md:text-2xl text-white tracking-wide leading-none">Shri Ram</span>
+                        <span class="text-brandGold text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1">Photography Studio</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-400 hover:text-white text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 font-medium">Hamare Baare Mein</a>
+                    <a href="#portfolio" class="text-gray-400 hover:text-white text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 font-medium">Portfolio</a>
+                    <a href="#reviews" class="text-gray-400 hover:text-white text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 font-medium">Reviews</a>
+                    <a href="#contact" class="px-6 py-2.5 border border-brandGold text-brandGold hover:bg-brandGold hover:text-black transition-colors duration-300 text-[11px] uppercase tracking-[0.1em] font-semibold rounded-full">Sampark Karein</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-brandDark border-b border-white/5 absolute w-full shadow-2xl">
+            <div class="px-6 py-8 flex flex-col space-y-6 text-center">
+                <a href="#about" class="text-gray-300 hover:text-brandGold text-sm uppercase tracking-widest font-medium">Hamare Baare Mein</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-brandGold text-sm uppercase tracking-widest font-medium">Portfolio</a>
+                <a href="#reviews" class="text-gray-300 hover:text-brandGold text-sm uppercase tracking-widest font-medium">Reviews</a>
+                <a href="#contact" class="text-brandGold text-sm uppercase tracking-widest font-bold mt-4">Sampark Karein</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden parallax-bg bg-[url('https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=2070&auto=format&fit=crop')]">
+        <div class="absolute inset-0 bg-gradient-to-b from-brandDark/40 via-brandDark/70 to-brandDark"></div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20 reveal">
+            <span class="block text-brandGold text-xs md:text-sm uppercase tracking-[0.3em] mb-6 font-semibold">Premium Photography & Cinematography</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.1] font-light">
+                Aapki <i class="text-brandGold">Kahani</i>,<br>
+                Hamara <i class="text-white/90">Nazarriya</i>.
+            </h1>
+            <p class="text-gray-300 text-sm md:text-base mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Hum sirf photos nahi kheench-te, hum un ehsaason ko freeze karte hain jo zindagi bhar aapke chehre par muskaan layenge. Chittorgarh ke sabse finest photographers.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#portfolio" class="group inline-flex items-center gap-3 text-white text-xs uppercase tracking-[0.2em] hover:text-brandGold transition-colors duration-300 font-medium">
+                    <span class="w-12 h-[1px] bg-white group-hover:bg-brandGold transition-colors duration-300"></span>
+                    Portfolio
+                    <span class="w-12 h-[1px] bg-white group-hover:bg-brandGold transition-colors duration-300"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-32 px-6 lg:px-12 bg-brandDark">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 lg:gap-24 reveal">
+            <div class="md:w-1/2 relative">
+                <div class="absolute -inset-4 border border-brandGold/30 rounded-lg transform translate-x-4 translate-y-4"></div>
+                <img src="image1.jpg" alt="Photographer at work" class="placeholder-img relative z-10 rounded-lg w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">Shri Ram <span class="text-brandGold italic">Studio</span> Ke Baare Mein</h2>
+                <div class="w-16 h-[2px] bg-brandGold mb-8"></div>
+                <p class="text-gray-300 text-base leading-relaxed mb-6 font-light">
+                    Chittorgarh mein sthit Shri Ram Studio ek achhi photo ko sirf lighting ya camera tak seemit nahi rakhta, balki us moment ke emotion ko pehchanta hai. Humara lakshya aapke special din ki sachai aur khubsurti ko apne lens ke through duniya ko dikhana hai.
+                </p>
+                <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+                    <div>
+                        <span class="block text-4xl font-serif text-white mb-2">500+</span>
+                        <span class="text-xs text-brandGold uppercase tracking-widest font-medium">Weddings Done</span>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-serif text-white mb-2">100%</span>
+                        <span class="text-xs text-brandGold uppercase tracking-widest font-medium">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-32 px-6 bg-brandGray">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-brandGold text-xs uppercase tracking-[0.2em] mb-4 block font-semibold">Chuninda Kaam</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-white">Hamara <i class="text-white/80">Portfolio</i></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                <div class="relative group overflow-hidden rounded-lg md:row-span-2 h-[450px] md:h-auto shadow-xl bg-[#1a1a1a]">
+                    <img src="image2.jpg" class="placeholder-img w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Wedding Couple">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div>
+                            <span class="text-brandGold text-xs uppercase tracking-widest mb-2 block font-medium">Wedding</span>
+                            <h3 class="text-white font-serif text-2xl">The Royal Knot</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg h-[300px] shadow-xl bg-[#1a1a1a]">
+                    <img src="image3.jpg" class="placeholder-img w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Pre Wedding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div><span class="text-brandGold text-xs uppercase tracking-widest mb-2 block font-medium">Pre-Wedding</span><h3 class="text-white font-serif text-2xl">Sunset Romance</h3></div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg h-[300px] shadow-xl bg-[#1a1a1a]">
+                    <img src="image4.jpg" class="placeholder-img w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Jewelry Details">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div><span class="text-brandGold text-xs uppercase tracking-widest mb-2 block font-medium">Details</span><h3 class="text-white font-serif text-2xl">The Finer Things</h3></div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg h-[300px] shadow-xl bg-[#1a1a1a]">
+                    <img src="image5.jpg" class="placeholder-img w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Cinematography">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div><span class="text-brandGold text-xs uppercase tracking-widest mb-2 block font-medium">Cinematic</span><h3 class="text-white font-serif text-2xl">Wedding Films</h3></div>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg h-[300px] shadow-xl bg-[#1a1a1a]">
+                    <img src="image6.jpg" class="placeholder-img w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Portrait">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                        <div><span class="text-brandGold text-xs uppercase tracking-widest mb-2 block font-medium">Portraits</span><h3 class="text-white font-serif text-2xl">Bridal Glow</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-32 px-6 bg-brandDark border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex justify-center items-center gap-3 mb-4">
+                    <i class="fab fa-google text-2xl text-white"></i>
+                    <span class="text-brandGold text-xs uppercase tracking-[0.2em] font-semibold">Client Reviews</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Logon Ka <i class="text-white/80">Bharosa</i></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 reveal">
+                <div class="bg-brandGray/40 p-8 rounded-xl border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-brandGold/40">
+                    <div class="flex gap-1 text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6 italic">"Shri Ram Studio ne hamari shaadi ki yaadon ko jaadu me badal diya. Unki team bahut professional hai."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center font-serif text-brandGold font-bold">R</div>
+                        <div><h4 class="text-white text-sm font-medium">Rahul Sharma</h4><span class="text-gray-500 text-xs">Local Guide</span></div>
+                    </div>
+                </div>
+                <div class="bg-brandGray/40 p-8 rounded-xl border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-brandGold/40">
+                    <div class="flex gap-1 text-yellow-400 text-xs mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6 italic">"Best photography studio in Chittorgarh! Pre-wedding shoot ka experience bahut hi smooth tha."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#222] flex items-center justify-center font-serif text-brandGold font-bold">N</div>
+                        <div><h4 class="text-white text-sm font-medium">Neha Singh</h4><span class="text-gray-500 text-xs">1 Review</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center reveal">
+                <a href="https://maps.app.goo.gl/mUp5XiFUiEvJ3eKT6" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-brandGold/30 text-brandGold hover:bg-brandGold hover:text-black transition-all duration-300 text-xs uppercase tracking-[0.1em] font-medium rounded-full">
+                    <i class="fab fa-google"></i> Google Par Aur Reviews Dekhein
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#050505] pt-24 border-t border-brandGold/20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brandGold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-20">
+                <div class="reveal">
+                    <span class="text-brandGold text-sm uppercase tracking-[0.2em] font-medium mb-4 block">Booking Open 2026-27</span>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">Apna Shoot <br><span class="italic text-brandGold">Plan Karein.</span></h2>
+                    
+                    <a href="https://wa.me/919784808711?text=Hello%20Shri%20Ram%20Studio!%20Mujhe%20photography%20shoot%20ke%20baare%20mein%20jaanna%20hai." 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-4 px-8 py-4 bg-whatsappGreen text-white rounded-full hover:bg-[#20bd5a] transition-all duration-300 shadow-lg hover:-translate-y-1 mt-6 w-full sm:w-auto justify-center group">
+                        <i class="fab fa-whatsapp text-3xl group-hover:scale-110 transition-transform"></i>
+                        <div class="flex flex-col text-left">
+                            <span class="text-[10px] uppercase tracking-wider opacity-90 font-semibold">Message Karein</span>
+                            <span class="text-lg font-bold tracking-wide">+91 97848 08711</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="flex flex-col gap-8 justify-center reveal">
+                    <div class="bg-brandGray/30 p-8 rounded-2xl border border-white/5 flex items-start gap-6">
+                        <div class="w-14 h-14 bg-brandDark rounded-full flex items-center justify-center text-brandGold shrink-0 border border-brandGold/20">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-serif text-xl mb-2">Studio Ka Pata</h4>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed">
+                                Higher Secondary School, Udaipur Rd,<br>Senthi, Chittorgarh, Rajasthan 312001
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://i.ibb.co/VWVwZk2/IMG-20260303-171555.png" alt="Logo" class="w-8 h-8 rounded-full bg-black">
+                    <span class="font-serif text-white">Shri Ram Studio</span>
+                </div>
+                <p class="text-xs text-gray-500 font-light tracking-wider">&copy; 2026 Shri Ram Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
